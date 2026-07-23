@@ -104,6 +104,6 @@ button, .orange, .green, #repeating_label {
     transform-origin: center;
 }
 
-button:hover, label:hover {
+button:hover, .orange:hover, .green:hover, #repeating_label:hover {
     transform: scale(1.05);
 }
