@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-div {
+div:not(.radio_button) {
     background-color: #282f75;
     border: 5px solid #dee1ff;
     border-radius: 15px;
@@ -106,4 +106,19 @@ button, .orange, .green, #repeating_label {
 
 button:hover, .orange:hover, .green:hover, #repeating_label:hover {
     transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    flex: 1;
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    body {
+        grid-template-columns: 1fr;
+    }
 }
