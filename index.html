@@ -20,26 +20,35 @@
         <form id="form" method="POST">
 
             <p>Command Block Options:</p>
-            <input type="radio" id="impulse" name="command_type" value="" checked>
-            <label for="impulse" class="orange">Impulse</label>
-            <input type="radio" id="chain" name="command_type" value="chain_">
-            <label for="chain" class="green">Chain</label>
-            <input type="radio" id="repeating" name="command_type" value="repeating_">
-            <label for="repeating" id="repeating_label">Repeating</label>
+            <div class="radio_button">
+                <input type="radio" id="impulse" name="command_type" value="" checked>
+                <label for="impulse" class="orange">Impulse</label>
+                <input type="radio" id="chain" name="command_type" value="chain_">
+                <label for="chain" class="green">Chain</label>
+                <input type="radio" id="repeating" name="command_type" value="repeating_">
+                <label for="repeating" id="repeating_label">Repeating</label>
+            </div>
+            
 
-            <br><br>
-            <input type="radio" id="unconditional" name="conditional" value="false" checked>
-            <label for="unconditional" class="green">Unconditional</label>
-            <input type="radio" id="conditional" name="conditional" value="true">
-            <label for="conditional" class="orange">Conditional</label>
+            <br>
+            <div class="radio_button">
+                <input type="radio" id="unconditional" name="conditional" value="false" checked>
+                <label for="unconditional" class="green">Unconditional</label>
+                <input type="radio" id="conditional" name="conditional" value="true">
+                <label for="conditional" class="orange">Conditional</label>
+            </div>
+            
 
-            <br><br>
-            <input type="radio" id="needs_redstone" name="always_active" value="0" checked>
-            <label for="needs_redstone" class="orange">Needs Redstone</label>
-            <input type="radio" id="always_active" name="always_active" value="1">
-            <label for="always_active" class="green">Always Active</label>
+            <br>
+            <div class="radio_button">
+                <input type="radio" id="needs_redstone" name="always_active" value="0" checked>
+                <label for="needs_redstone" class="orange">Needs Redstone</label>
+                <input type="radio" id="always_active" name="always_active" value="1">
+                <label for="always_active" class="green">Always Active</label>
+            </div>
+            
 
-            <br><br>
+            <br>
             <label for="direction">Command Block Facing Direction:</label>
 
             <select name="direction" id="direction">
@@ -51,10 +60,10 @@
                 <option value="down">Down</option>
             </select>
 
-            <br><br>
+            <br>
             <label for="command">Command:</label>
             <br>
-            <textarea id="command" name="command" rows="5" cols="60" placeholder="Enter Minecraft Command..."></textarea>
+            <textarea id="command" name="command" rows="5" cols="10" placeholder="Enter Minecraft Command..."></textarea>
 
             <br><br>
             <button type="button" onclick="add_command_block()">Add Another Command Block</button>
@@ -62,7 +71,7 @@
     </div>
     <div id="output">
         <h1>Output</h1>
-        <textarea id="output_text" name="output_text" rows="30" cols="60" placeholder="Output Generates Here..."></textarea>
+        <textarea id="output_text" name="output_text" rows="5" cols="10" placeholder="Output Generates Here..."></textarea>
     </div>
     <script src="script.js"></script>
 </body>
