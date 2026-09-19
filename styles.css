@@ -1,0 +1,161 @@
+:root {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: 'InterVariable', sans-serif;
+  }
+}
+
+body {
+    background-color: #3a4166;
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    margin: 0;
+    padding: 0px;
+    min-height: 100vh;
+}
+
+div:not(.radio_button):not(.button_row) {
+    background-color: #282f75;
+    border: 5px solid #dee1ff;
+    border-radius: 15px;
+    margin: 25px;
+    padding: 25px;
+    text-align: center;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div h1 {
+    font-size: 40px;
+    color: #dee1ff;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+#output_text, div form, #position_container {
+    background-color: #3a4166;
+    border: 5px solid #dee1ff;
+    min-height: max-content;
+    border-radius: 15px;
+    color: #dee1ff;
+    padding: 10px;
+    font-size: 20px;
+    flex: 1;
+}
+
+#position_container {
+    max-height: fit-content;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    border-radius: 10px;
+    padding: 3px;
+    border: 5px solid transparent;
+}
+
+input[type="radio"]:checked + label {
+    border: 5px solid #3a4166;
+    background-clip: padding-box;
+}
+
+input[type="text"], textarea, select, button {
+    background-color: #282f75;
+    font-size: x-large;
+    border: 3px solid #dee1ff;
+    border-radius: 5px;
+    color: #dee1ff;
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+.orange {
+    background-color: #f2b477;
+    color: #282f75;
+    font-weight: bold;
+}
+
+.green {
+    background-color: #77f2b9;
+    color: #282f75;
+    font-weight: bold;
+}
+
+#repeating_label {
+    background-color: #a477f2;
+    color: #282f75;
+    font-weight: bold;
+}
+
+button, .orange, .green, #repeating_label {
+    display: inline-block;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+}
+
+button:hover, .orange:hover, .green:hover, #repeating_label:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    flex: 1;
+}
+
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    body {
+        grid-template-columns: 1fr;
+    }
+}
+
+.button_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.check_option {
+    display: block;
+    margin-top: 14px;
+    padding: 8px;
+    border-radius: 6px;
+    background: #282f75;
+}
+
+.small_text {
+    font-size: 14px;
+    margin: 8px 0 0;
+    color: #dee1ff;
+}
+
+#status.error {
+    color: #ffb0b0;
+}
+
+#copy_output {
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+code {
+    font-family: Consolas, Monaco, monospace;
+}
